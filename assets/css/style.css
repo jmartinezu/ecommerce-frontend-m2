@@ -1,45 +1,42 @@
-/* 1. Variables para mantener consistencia de colores */
+/* Variables de color */
 :root {
-    --color-principal: #d32f2f; /* Un rojo deportivo para "El Rayo" */
-    --color-oscuro: #212121;
+    --color-rayo: #e63946; /* Rojo deportivo */
+    --fondo-gris: #f4f4f9;
 }
 
-/* 2. Ajustes generales */
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo-gris);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 3. Personalización de las Cards */
+/* Efectos en las tarjetas de productos */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
 }
 
 .card-img-top {
-    height: 200px;
-    object-fit: cover; /* Evita que las imágenes se deformen */
+    height: 180px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #fff;
 }
 
-/* 4. Estilos para el contador del carrito */
-#cart-count {
-    font-size: 0.8rem;
-    vertical-align: middle;
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
-/* 5. Ajuste para dispositivos móviles (≤ 420px) */
+/* Ajustes para móviles (Responsivo) */
 @media (max-width: 420px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.2rem;
+    .display-4 {
+        font-size: 2rem;
     }
 }
