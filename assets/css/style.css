@@ -1,0 +1,45 @@
+/* 1. Variables para mantener consistencia de colores */
+:root {
+    --color-principal: #d32f2f; /* Un rojo deportivo para "El Rayo" */
+    --color-oscuro: #212121;
+}
+
+/* 2. Ajustes generales */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. Personalización de las Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+/* 4. Estilos para el contador del carrito */
+#cart-count {
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+/* 5. Ajuste para dispositivos móviles (≤ 420px) */
+@media (max-width: 420px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
